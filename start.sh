@@ -11,7 +11,7 @@ if [ -z "$COSPACE_NAME" ]; then
 fi
 
 # Generate random UUID
-UUID=$(uuidgen)
+UUID=$(cat /proc/sys/kernel/random/uuid)
 
 # Create directory structure
 mkdir -p nginx/html v2ray logs
